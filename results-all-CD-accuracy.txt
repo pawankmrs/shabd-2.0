@@ -1,0 +1,253 @@
+> cor(df_freq$mean.acc,  df_freq$freq_em)
+[1] 0.1287783
+> cor(df_freq$mean.acc,  df_freq$freq_blog_WL)
+[1] 0.3420889
+> cor(df_freq$mean.acc,  df_freq$freq_news_WL)
+[1] 0.2629839
+> cor(df_freq$mean.acc,  df_freq$freq_shabd)
+[1] 0.1961479
+> cor(df_freq$mean.acc,  df_freq$freq_youtube)
+[1] 0.3641017
+> cor(df_freq$mean.acc,  df_freq$freq_twitter)
+[1] 0.3754259
+> cor(df_freq$mean.acc,  df_freq$freq_C4)
+[1] 0.3354512
+> cor(df_freq$mean.acc,  df_freq$freq_em+df_freq$freq_blog_WL)
+[1] 0.2674895
+> cor(df_freq$mean.acc,  df_freq$freq_em+df_freq$freq_news_WL)
+[1] 0.2130854
+> cor(df_freq$mean.acc,  df_freq$freq_em+df_freq$freq_shabd)
+[1] 0.2447747
+> cor(df_freq$mean.acc,  df_freq$freq_em+df_freq$freq_youtube)
+[1] 0.3001893
+> cor(df_freq$mean.acc,  df_freq$freq_em+df_freq$freq_twitter)
+[1] 0.3081462
+> cor(df_freq$mean.acc,  df_freq$freq_em+df_freq$freq_C4)
+[1] 0.2502212
+> cor(df_freq$mean.acc,  df_freq$freq_blog_WL+df_freq$freq_news_WL)
+[1] 0.3343347
+> cor(df_freq$mean.acc,  df_freq$freq_blog_WL+df_freq$freq_shabd)
+[1] 0.3086988
+> cor(df_freq$mean.acc,  df_freq$freq_blog_WL+df_freq$freq_youtube)
+[1] 0.3836874
+> cor(df_freq$mean.acc,  df_freq$freq_blog_WL+df_freq$freq_twitter)
+[1] 0.397177
+> cor(df_freq$mean.acc,  df_freq$freq_blog_WL+df_freq$freq_C4)
+[1] 0.3680083
+> cor(df_freq$mean.acc,  df_freq$freq_news_WL+df_freq$freq_shabd)
+[1] 0.2643928
+> cor(df_freq$mean.acc,  df_freq$freq_news_WL+df_freq$freq_youtube)
+[1] 0.3625183
+> cor(df_freq$mean.acc,  df_freq$freq_news_WL+df_freq$freq_twitter)
+[1] 0.3614599
+> cor(df_freq$mean.acc,  df_freq$freq_news_WL+df_freq$freq_C4)
+[1] 0.313413
+> cor(df_freq$mean.acc,  df_freq$freq_shabd+df_freq$freq_youtube)
+[1] 0.3292387
+> cor(df_freq$mean.acc,  df_freq$freq_shabd+df_freq$freq_twitter)
+[1] 0.3238133
+> cor(df_freq$mean.acc,  df_freq$freq_shabd+df_freq$freq_C4)
+[1] 0.2834234
+> cor(df_freq$mean.acc,  df_freq$freq_youtube+df_freq$freq_twitter)
+[1] 0.3872556
+> cor(df_freq$mean.acc,  df_freq$freq_youtube+df_freq$freq_C4)
+[1] 0.3907326
+> cor(df_freq$mean.acc,  df_freq$freq_twitter+df_freq$freq_C4)
+[1] 0.3851678
+> cor(df_freq$mean.acc,  df_freq$freq_em+df_freq$freq_blog_WL+df_freq$freq_news_WL)
+[1] 0.2842117
+> cor(df_freq$mean.acc,  df_freq$freq_em+df_freq$freq_blog_WL+df_freq$freq_shabd)
+[1] 0.3132187
+> cor(df_freq$mean.acc,  df_freq$freq_em+df_freq$freq_blog_WL+df_freq$freq_youtube)
+[1] 0.3413061
+> cor(df_freq$mean.acc,  df_freq$freq_em+df_freq$freq_blog_WL+df_freq$freq_twitter)
+[1] 0.3497034
+> cor(df_freq$mean.acc,  df_freq$freq_em+df_freq$freq_blog_WL+df_freq$freq_C4)
+[1] 0.3116117
+> cor(df_freq$mean.acc,  df_freq$freq_em+df_freq$freq_news_WL+df_freq$freq_shabd)
+[1] 0.265807
+> cor(df_freq$mean.acc,  df_freq$freq_em+df_freq$freq_news_WL+df_freq$freq_youtube)
+[1] 0.3095008
+> cor(df_freq$mean.acc,  df_freq$freq_em+df_freq$freq_news_WL+df_freq$freq_twitter)
+[1] 0.3117572
+> cor(df_freq$mean.acc,  df_freq$freq_em+df_freq$freq_news_WL+df_freq$freq_C4)
+[1] 0.2684317
+> cor(df_freq$mean.acc,  df_freq$freq_em+df_freq$freq_shabd+df_freq$freq_youtube)
+[1] 0.3350055
+> cor(df_freq$mean.acc,  df_freq$freq_em+df_freq$freq_shabd+df_freq$freq_twitter)
+[1] 0.3309198
+> cor(df_freq$mean.acc,  df_freq$freq_em+df_freq$freq_shabd+df_freq$freq_C4)
+[1] 0.2891425
+> cor(df_freq$mean.acc,  df_freq$freq_em+df_freq$freq_youtube+df_freq$freq_twitter)
+[1] 0.3559888
+> cor(df_freq$mean.acc,  df_freq$freq_em+df_freq$freq_youtube+df_freq$freq_C4)
+[1] 0.3356252
+> cor(df_freq$mean.acc,  df_freq$freq_em+df_freq$freq_twitter+df_freq$freq_C4)
+[1] 0.3356086
+> cor(df_freq$mean.acc,  df_freq$freq_blog_WL+df_freq$freq_news_WL+df_freq$freq_shabd)
+[1] 0.321374
+> cor(df_freq$mean.acc,  df_freq$freq_blog_WL+df_freq$freq_news_WL+df_freq$freq_youtube)
+[1] 0.3764297
+> cor(df_freq$mean.acc,  df_freq$freq_blog_WL+df_freq$freq_news_WL+df_freq$freq_twitter)
+[1] 0.3803909
+> cor(df_freq$mean.acc,  df_freq$freq_blog_WL+df_freq$freq_news_WL+df_freq$freq_C4)
+[1] 0.3482324
+> cor(df_freq$mean.acc,  df_freq$freq_blog_WL+df_freq$freq_shabd+df_freq$freq_youtube)
+[1] 0.3636898
+> cor(df_freq$mean.acc,  df_freq$freq_blog_WL+df_freq$freq_shabd+df_freq$freq_twitter)
+[1] 0.3635712
+> cor(df_freq$mean.acc,  df_freq$freq_blog_WL+df_freq$freq_shabd+df_freq$freq_C4)
+[1] 0.3358636
+> cor(df_freq$mean.acc,  df_freq$freq_blog_WL+df_freq$freq_youtube+df_freq$freq_twitter)
+[1] 0.3995027
+> cor(df_freq$mean.acc,  df_freq$freq_blog_WL+df_freq$freq_youtube+df_freq$freq_C4)
+[1] 0.394421
+> cor(df_freq$mean.acc,  df_freq$freq_blog_WL+df_freq$freq_twitter+df_freq$freq_C4)
+[1] 0.396584
+> cor(df_freq$mean.acc,  df_freq$freq_news_WL+df_freq$freq_shabd+df_freq$freq_youtube)
+[1] 0.3407397
+> cor(df_freq$mean.acc,  df_freq$freq_news_WL+df_freq$freq_shabd+df_freq$freq_twitter)
+[1] 0.3352144
+> cor(df_freq$mean.acc,  df_freq$freq_news_WL+df_freq$freq_shabd+df_freq$freq_C4)
+[1] 0.3002572
+> cor(df_freq$mean.acc,  df_freq$freq_news_WL+df_freq$freq_youtube+df_freq$freq_twitter)
+[1] 0.3844362
+> cor(df_freq$mean.acc,  df_freq$freq_news_WL+df_freq$freq_youtube+df_freq$freq_C4)
+[1] 0.3699668
+> cor(df_freq$mean.acc,  df_freq$freq_news_WL+df_freq$freq_twitter+df_freq$freq_C4)
+[1] 0.3654789
+> cor(df_freq$mean.acc,  df_freq$freq_shabd+df_freq$freq_youtube+df_freq$freq_twitter)
+[1] 0.3652073
+> cor(df_freq$mean.acc,  df_freq$freq_shabd+df_freq$freq_youtube+df_freq$freq_C4)
+[1] 0.3531139
+> cor(df_freq$mean.acc,  df_freq$freq_shabd+df_freq$freq_twitter+df_freq$freq_C4)
+[1] 0.3459096
+> cor(df_freq$mean.acc,  df_freq$freq_youtube+df_freq$freq_twitter+df_freq$freq_C4)
+[1] 0.3976426
+> cor(df_freq$mean.acc,  df_freq$freq_em+df_freq$freq_blog_WL+df_freq$freq_news_WL+df_freq$freq_shabd)
+[1] 0.3107545
+> cor(df_freq$mean.acc,  df_freq$freq_em+df_freq$freq_blog_WL+df_freq$freq_news_WL+df_freq$freq_youtube)
+[1] 0.3384541
+> cor(df_freq$mean.acc,  df_freq$freq_em+df_freq$freq_blog_WL+df_freq$freq_news_WL+df_freq$freq_twitter)
+[1] 0.3420657
+> cor(df_freq$mean.acc,  df_freq$freq_em+df_freq$freq_blog_WL+df_freq$freq_news_WL+df_freq$freq_C4)
+[1] 0.3100823
+> cor(df_freq$mean.acc,  df_freq$freq_em+df_freq$freq_blog_WL+df_freq$freq_shabd+df_freq$freq_youtube)
+[1] 0.3587829
+> cor(df_freq$mean.acc,  df_freq$freq_em+df_freq$freq_blog_WL+df_freq$freq_shabd+df_freq$freq_twitter)
+[1] 0.3587743
+> cor(df_freq$mean.acc,  df_freq$freq_em+df_freq$freq_blog_WL+df_freq$freq_shabd+df_freq$freq_C4)
+[1] 0.3286184
+> cor(df_freq$mean.acc,  df_freq$freq_em+df_freq$freq_blog_WL+df_freq$freq_youtube+df_freq$freq_twitter)
+[1] 0.3737753
+> cor(df_freq$mean.acc,  df_freq$freq_em+df_freq$freq_blog_WL+df_freq$freq_youtube+df_freq$freq_C4)
+[1] 0.3573879
+> cor(df_freq$mean.acc,  df_freq$freq_em+df_freq$freq_blog_WL+df_freq$freq_twitter+df_freq$freq_C4)
+[1] 0.3598662
+> cor(df_freq$mean.acc,  df_freq$freq_em+df_freq$freq_news_WL+df_freq$freq_shabd+df_freq$freq_youtube)
+[1] 0.3295653
+> cor(df_freq$mean.acc,  df_freq$freq_em+df_freq$freq_news_WL+df_freq$freq_shabd+df_freq$freq_twitter)
+[1] 0.3263784
+> cor(df_freq$mean.acc,  df_freq$freq_em+df_freq$freq_news_WL+df_freq$freq_shabd+df_freq$freq_C4)
+[1] 0.2925185
+> cor(df_freq$mean.acc,  df_freq$freq_em+df_freq$freq_news_WL+df_freq$freq_youtube+df_freq$freq_twitter)
+[1] 0.3517807
+> cor(df_freq$mean.acc,  df_freq$freq_em+df_freq$freq_news_WL+df_freq$freq_youtube+df_freq$freq_C4)
+[1] 0.3298542
+> cor(df_freq$mean.acc,  df_freq$freq_em+df_freq$freq_news_WL+df_freq$freq_twitter+df_freq$freq_C4)
+[1] 0.3289779
+> cor(df_freq$mean.acc,  df_freq$freq_em+df_freq$freq_shabd+df_freq$freq_youtube+df_freq$freq_twitter)
+[1] 0.3646154
+> cor(df_freq$mean.acc,  df_freq$freq_em+df_freq$freq_shabd+df_freq$freq_youtube+df_freq$freq_C4)
+[1] 0.3462207
+> cor(df_freq$mean.acc,  df_freq$freq_em+df_freq$freq_shabd+df_freq$freq_twitter+df_freq$freq_C4)
+[1] 0.341347
+> cor(df_freq$mean.acc,  df_freq$freq_em+df_freq$freq_youtube+df_freq$freq_twitter+df_freq$freq_C4)
+[1] 0.3677539
+> cor(df_freq$mean.acc,  df_freq$freq_blog_WL+df_freq$freq_news_WL+df_freq$freq_shabd+df_freq$freq_youtube)
+[1] 0.3626539
+> cor(df_freq$mean.acc,  df_freq$freq_blog_WL+df_freq$freq_news_WL+df_freq$freq_shabd+df_freq$freq_twitter)
+[1] 0.3610659
+> cor(df_freq$mean.acc,  df_freq$freq_blog_WL+df_freq$freq_news_WL+df_freq$freq_shabd+df_freq$freq_C4)
+[1] 0.3349219
+> cor(df_freq$mean.acc,  df_freq$freq_blog_WL+df_freq$freq_news_WL+df_freq$freq_youtube+df_freq$freq_twitter)
+[1] 0.3928331
+> cor(df_freq$mean.acc,  df_freq$freq_blog_WL+df_freq$freq_news_WL+df_freq$freq_youtube+df_freq$freq_C4)
+[1] 0.3797652
+> cor(df_freq$mean.acc,  df_freq$freq_blog_WL+df_freq$freq_news_WL+df_freq$freq_twitter+df_freq$freq_C4)
+[1] 0.3796335
+> cor(df_freq$mean.acc,  df_freq$freq_blog_WL+df_freq$freq_shabd+df_freq$freq_youtube+df_freq$freq_twitter)
+[1] 0.3833291
+> cor(df_freq$mean.acc,  df_freq$freq_blog_WL+df_freq$freq_shabd+df_freq$freq_youtube+df_freq$freq_C4)
+[1] 0.3726041
+> cor(df_freq$mean.acc,  df_freq$freq_blog_WL+df_freq$freq_shabd+df_freq$freq_twitter+df_freq$freq_C4)
+[1] 0.3699834
+> cor(df_freq$mean.acc,  df_freq$freq_blog_WL+df_freq$freq_youtube+df_freq$freq_twitter+df_freq$freq_C4)
+[1] 0.4032066
+> cor(df_freq$mean.acc,  df_freq$freq_news_WL+df_freq$freq_shabd+df_freq$freq_youtube+df_freq$freq_twitter)
+[1] 0.3671227
+> cor(df_freq$mean.acc,  df_freq$freq_news_WL+df_freq$freq_shabd+df_freq$freq_youtube+df_freq$freq_C4)
+[1] 0.3509467
+> cor(df_freq$mean.acc,  df_freq$freq_news_WL+df_freq$freq_shabd+df_freq$freq_twitter+df_freq$freq_C4)
+[1] 0.3453217
+> cor(df_freq$mean.acc,  df_freq$freq_news_WL+df_freq$freq_youtube+df_freq$freq_twitter+df_freq$freq_C4)
+[1] 0.3864236
+> cor(df_freq$mean.acc,  df_freq$freq_shabd+df_freq$freq_youtube+df_freq$freq_twitter+df_freq$freq_C4)
+[1] 0.3746832
+> cor(df_freq$mean.acc,  df_freq$freq_em+df_freq$freq_blog_WL+df_freq$freq_news_WL+df_freq$freq_shabd+df_freq$freq_youtube)
+[1] 0.350034
+> cor(df_freq$mean.acc,  df_freq$freq_em+df_freq$freq_blog_WL+df_freq$freq_news_WL+df_freq$freq_shabd+df_freq$freq_twitter)
+[1] 0.3492872
+> cor(df_freq$mean.acc,  df_freq$freq_em+df_freq$freq_blog_WL+df_freq$freq_news_WL+df_freq$freq_shabd+df_freq$freq_C4)
+[1] 0.3229667
+> cor(df_freq$mean.acc,  df_freq$freq_em+df_freq$freq_blog_WL+df_freq$freq_news_WL+df_freq$freq_youtube+df_freq$freq_twitter)
+[1] 0.3667051
+> cor(df_freq$mean.acc,  df_freq$freq_em+df_freq$freq_blog_WL+df_freq$freq_news_WL+df_freq$freq_youtube+df_freq$freq_C4)
+[1] 0.349063
+> cor(df_freq$mean.acc,  df_freq$freq_em+df_freq$freq_blog_WL+df_freq$freq_news_WL+df_freq$freq_twitter+df_freq$freq_C4)
+[1] 0.3499105
+> cor(df_freq$mean.acc,  df_freq$freq_em+df_freq$freq_blog_WL+df_freq$freq_shabd+df_freq$freq_youtube+df_freq$freq_twitter)
+[1] 0.3781572
+> cor(df_freq$mean.acc,  df_freq$freq_em+df_freq$freq_blog_WL+df_freq$freq_shabd+df_freq$freq_youtube+df_freq$freq_C4)
+[1] 0.3630293
+> cor(df_freq$mean.acc,  df_freq$freq_em+df_freq$freq_blog_WL+df_freq$freq_shabd+df_freq$freq_twitter+df_freq$freq_C4)
+[1] 0.3613074
+> cor(df_freq$mean.acc,  df_freq$freq_em+df_freq$freq_blog_WL+df_freq$freq_youtube+df_freq$freq_twitter+df_freq$freq_C4)
+[1] 0.3792741
+> cor(df_freq$mean.acc,  df_freq$freq_em+df_freq$freq_news_WL+df_freq$freq_shabd+df_freq$freq_youtube+df_freq$freq_twitter)
+[1] 0.3574822
+> cor(df_freq$mean.acc,  df_freq$freq_em+df_freq$freq_news_WL+df_freq$freq_shabd+df_freq$freq_youtube+df_freq$freq_C4)
+[1] 0.3384327
+> cor(df_freq$mean.acc,  df_freq$freq_em+df_freq$freq_news_WL+df_freq$freq_shabd+df_freq$freq_twitter+df_freq$freq_C4)
+[1] 0.3348415
+> cor(df_freq$mean.acc,  df_freq$freq_em+df_freq$freq_news_WL+df_freq$freq_youtube+df_freq$freq_twitter+df_freq$freq_C4)
+[1] 0.3592375
+> cor(df_freq$mean.acc,  df_freq$freq_em+df_freq$freq_shabd+df_freq$freq_youtube+df_freq$freq_twitter+df_freq$freq_C4)
+[1] 0.3683485
+> cor(df_freq$mean.acc,  df_freq$freq_blog_WL+df_freq$freq_news_WL+df_freq$freq_shabd+df_freq$freq_youtube+df_freq$freq_twitter)
+[1] 0.3801195
+> cor(df_freq$mean.acc,  df_freq$freq_blog_WL+df_freq$freq_news_WL+df_freq$freq_shabd+df_freq$freq_youtube+df_freq$freq_C4)
+[1] 0.3665652
+> cor(df_freq$mean.acc,  df_freq$freq_blog_WL+df_freq$freq_news_WL+df_freq$freq_shabd+df_freq$freq_twitter+df_freq$freq_C4)
+[1] 0.3639621
+> cor(df_freq$mean.acc,  df_freq$freq_blog_WL+df_freq$freq_news_WL+df_freq$freq_youtube+df_freq$freq_twitter+df_freq$freq_C4)
+[1] 0.3928524
+> cor(df_freq$mean.acc,  df_freq$freq_blog_WL+df_freq$freq_shabd+df_freq$freq_youtube+df_freq$freq_twitter+df_freq$freq_C4)
+[1] 0.3867336
+> cor(df_freq$mean.acc,  df_freq$freq_news_WL+df_freq$freq_shabd+df_freq$freq_youtube+df_freq$freq_twitter+df_freq$freq_C4)
+[1] 0.3708304
+> cor(df_freq$mean.acc,  df_freq$freq_em+df_freq$freq_blog_WL+df_freq$freq_news_WL+df_freq$freq_shabd+df_freq$freq_youtube+df_freq$freq_twitter)
+[1] 0.3698713
+> cor(df_freq$mean.acc,  df_freq$freq_em+df_freq$freq_blog_WL+df_freq$freq_news_WL+df_freq$freq_shabd+df_freq$freq_youtube+df_freq$freq_C4)
+[1] 0.3540971
+> cor(df_freq$mean.acc,  df_freq$freq_em+df_freq$freq_blog_WL+df_freq$freq_news_WL+df_freq$freq_shabd+df_freq$freq_twitter+df_freq$freq_C4)
+[1] 0.3524637
+> cor(df_freq$mean.acc,  df_freq$freq_em+df_freq$freq_blog_WL+df_freq$freq_news_WL+df_freq$freq_youtube+df_freq$freq_twitter+df_freq$freq_C4)
+[1] 0.3704294
+> cor(df_freq$mean.acc,  df_freq$freq_em+df_freq$freq_blog_WL+df_freq$freq_shabd+df_freq$freq_youtube+df_freq$freq_twitter+df_freq$freq_C4)
+[1] 0.3789178
+> cor(df_freq$mean.acc,  df_freq$freq_em+df_freq$freq_news_WL+df_freq$freq_shabd+df_freq$freq_youtube+df_freq$freq_twitter+df_freq$freq_C4)
+[1] 0.3604761
+> cor(df_freq$mean.acc,  df_freq$freq_blog_WL+df_freq$freq_news_WL+df_freq$freq_shabd+df_freq$freq_youtube+df_freq$freq_twitter+df_freq$freq_C4)
+[1] 0.3809566
+> 
