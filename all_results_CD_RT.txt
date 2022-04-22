@@ -1,0 +1,130 @@
+> cor(df_all$mean.RT, df_all$CD_zipf_wordlex_blog+df_all$CD_zipf_wordlex_news+df_all$CD_zipf_shabd+df_all$CD_zipf_twitter)
+[1] -0.4975749
+> cor(df_all$mean.RT, df_all$CD_zipf_shabd)
+[1] -0.3526293
+> cor(df_all$mean.RT, df_all$CD_zipf_youtube)
+[1] -0.4858524
+> cor(df_all$mean.RT, df_all$CD_zipf_wordlex_blog+df_all$CD_zipf_C4)
+[1] -0.4765698
+> cor(df_all$mean.RT, df_all$CD_zipf_wordlex_blog+df_all$CD_zipf_youtube+df_all$CD_zipf_twitter)
+[1] -0.5141349
+> cor(df_all$mean.RT, df_all$CD_zipf_shabd+df_all$CD_zipf_C4)
+[1] -0.4263604
+> cor(df_all$mean.RT, df_all$CD_zipf_wordlex_news+df_all$CD_zipf_shabd+df_all$CD_zipf_twitter)
+[1] -0.4704204
+> cor(df_all$mean.RT, df_all$CD_zipf_wordlex_news+df_all$CD_zipf_shabd+df_all$CD_zipf_youtube+df_all$CD_zipf_twitter)
+[1] -0.5075057
+> cor(df_all$mean.RT, df_all$CD_zipf_wordlex_news+df_all$CD_zipf_shabd+df_all$CD_zipf_twitter+df_all$CD_zipf_C4)
+[1] -0.4732775
+> cor(df_all$mean.RT, df_all$CD_zipf_wordlex_news+df_all$CD_zipf_shabd+df_all$CD_zipf_youtube)
+[1] -0.497208
+> cor(df_all$mean.RT, df_all$CD_zipf_wordlex_blog+df_all$CD_zipf_wordlex_news+df_all$CD_zipf_shabd+df_all$CD_zipf_youtube+df_all$CD_zipf_twitter+df_all$CD_zipf_C4)
+[1] -0.5152972
+> cor(df_all$mean.RT, df_all$CD_zipf_wordlex_blog+df_all$CD_zipf_wordlex_news+df_all$CD_zipf_twitter)
+[1] -0.4873868
+> cor(df_all$mean.RT, df_all$CD_zipf_shabd+df_all$CD_zipf_youtube+df_all$CD_zipf_twitter+df_all$CD_zipf_C4)
+[1] -0.5117281
+> cor(df_all$mean.RT, df_all$CD_zipf_youtube+df_all$CD_zipf_twitter)
+[1] -0.493382
+> cor(df_all$mean.RT, df_all$CD_zipf_wordlex_blog+df_all$CD_zipf_wordlex_news+df_all$CD_zipf_youtube+df_all$CD_zipf_twitter)
+[1] -0.5083283
+> cor(df_all$mean.RT, df_all$CD_zipf_wordlex_blog+df_all$CD_zipf_wordlex_news+df_all$CD_zipf_shabd+df_all$CD_zipf_youtube+df_all$CD_zipf_twitter)
+[1] -0.5202368
+> cor(df_all$mean.RT, df_all$CD_zipf_wordlex_news+df_all$CD_zipf_shabd+df_all$CD_zipf_youtube+df_all$CD_zipf_twitter+df_all$CD_zipf_C4)
+[1] -0.5047968
+> cor(df_all$mean.RT, df_all$CD_zipf_wordlex_blog+df_all$CD_zipf_wordlex_news)
+[1] -0.4416395
+> cor(df_all$mean.RT, df_all$CD_zipf_wordlex_news+df_all$CD_zipf_twitter)
+[1] -0.4578485
+> cor(df_all$mean.RT, df_all$CD_zipf_wordlex_blog+df_all$CD_zipf_shabd+df_all$CD_zipf_youtube+df_all$CD_zipf_twitter)
+[1] -0.527306
+> cor(df_all$mean.RT, df_all$CD_zipf_wordlex_blog+df_all$CD_zipf_shabd+df_all$CD_zipf_C4)
+[1] -0.4788345
+> cor(df_all$mean.RT, df_all$CD_zipf_wordlex_blog+df_all$CD_zipf_wordlex_news+df_all$CD_zipf_youtube+df_all$CD_zipf_twitter+df_all$CD_zipf_C4)
+[1] -0.5063947
+> cor(df_all$mean.RT, df_all$CD_zipf_wordlex_news+df_all$CD_zipf_shabd+df_all$CD_zipf_youtube+df_all$CD_zipf_C4)
+[1] -0.4955641
+> cor(df_all$mean.RT, df_all$CD_zipf_shabd+df_all$CD_zipf_twitter+df_all$CD_zipf_C4)
+[1] -0.4771004
+> cor(df_all$mean.RT, df_all$CD_zipf_wordlex_news)
+[1] -0.348134
+> cor(df_all$mean.RT, df_all$CD_zipf_shabd+df_all$CD_zipf_twitter)
+[1] -0.4637704
+> cor(df_all$mean.RT, df_all$CD_zipf_wordlex_blog+df_all$CD_zipf_wordlex_news+df_all$CD_zipf_shabd+df_all$CD_zipf_youtube+df_all$CD_zipf_C4)
+[1] -0.5097246
+> cor(df_all$mean.RT, df_all$CD_zipf_wordlex_blog+df_all$CD_zipf_shabd+df_all$CD_zipf_twitter+df_all$CD_zipf_C4)
+[1] -0.5030071
+> cor(df_all$mean.RT, df_all$CD_zipf_wordlex_news+df_all$CD_zipf_shabd)
+[1] -0.4084236
+> cor(df_all$mean.RT, )
+Error in cor(df_all$mean.RT, ) : 
+  supply both 'x' and 'y' or a matrix-like 'x'
+> cor(df_all$mean.RT, df_all$CD_zipf_wordlex_blog+df_all$CD_zipf_wordlex_news+df_all$CD_zipf_shabd+df_all$CD_zipf_C4)
+[1] -0.4704575
+> cor(df_all$mean.RT, df_all$CD_zipf_youtube+df_all$CD_zipf_C4)
+[1] -0.5086415
+> cor(df_all$mean.RT, df_all$CD_zipf_wordlex_news+df_all$CD_zipf_twitter+df_all$CD_zipf_C4)
+[1] -0.4625384
+> cor(df_all$mean.RT, df_all$CD_zipf_wordlex_blog)
+[1] -0.4596555
+> cor(df_all$mean.RT, df_all$CD_zipf_youtube+df_all$CD_zipf_twitter+df_all$CD_zipf_C4)
+[1] -0.5049708
+> cor(df_all$mean.RT, df_all$CD_zipf_wordlex_blog+df_all$CD_zipf_wordlex_news+df_all$CD_zipf_shabd+df_all$CD_zipf_twitter+df_all$CD_zipf_C4)
+[1] -0.4935826
+> cor(df_all$mean.RT, df_all$CD_zipf_wordlex_blog+df_all$CD_zipf_wordlex_news+df_all$CD_zipf_shabd+df_all$CD_zipf_youtube)
+[1] -0.5154287
+> cor(df_all$mean.RT, df_all$CD_zipf_wordlex_blog+df_all$CD_zipf_twitter)
+[1] -0.5023015
+> cor(df_all$mean.RT, df_all$CD_zipf_wordlex_blog+df_all$CD_zipf_wordlex_news+df_all$CD_zipf_youtube)
+[1] -0.5007529
+> cor(df_all$mean.RT, df_all$CD_zipf_twitter+df_all$CD_zipf_C4)
+[1] -0.4756833
+> cor(df_all$mean.RT, df_all$CD_zipf_wordlex_blog+df_all$CD_zipf_shabd+df_all$CD_zipf_youtube+df_all$CD_zipf_twitter+df_all$CD_zipf_C4)
+[1] -0.5241266
+> cor(df_all$mean.RT, df_all$CD_zipf_wordlex_blog+df_all$CD_zipf_shabd+df_all$CD_zipf_youtube+df_all$CD_zipf_C4)
+[1] -0.5223444
+> cor(df_all$mean.RT, df_all$CD_zipf_wordlex_news+df_all$CD_zipf_youtube+df_all$CD_zipf_C4)
+[1] -0.4863985
+> cor(df_all$mean.RT, df_all$CD_zipf_wordlex_news+df_all$CD_zipf_youtube+df_all$CD_zipf_twitter+df_all$CD_zipf_C4)
+[1] -0.4958356
+> cor(df_all$mean.RT, df_all$CD_zipf_wordlex_blog+df_all$CD_zipf_wordlex_news+df_all$CD_zipf_shabd)
+[1] -0.4668247
+> cor(df_all$mean.RT, df_all$CD_zipf_wordlex_blog+df_all$CD_zipf_youtube)
+[1] -0.5120049
+> cor(df_all$mean.RT, df_all$CD_zipf_shabd+df_all$CD_zipf_youtube)
+[1] -0.497494
+> cor(df_all$mean.RT, df_all$CD_zipf_wordlex_blog+df_all$CD_zipf_shabd+df_all$CD_zipf_youtube)
+[1] -0.525688
+> cor(df_all$mean.RT, df_all$CD_zipf_wordlex_blog+df_all$CD_zipf_shabd+df_all$CD_zipf_twitter)
+[1] -0.5048937
+> cor(df_all$mean.RT, df_all$CD_zipf_wordlex_blog+df_all$CD_zipf_youtube+df_all$CD_zipf_C4)
+[1] -0.517454
+> cor(df_all$mean.RT, df_all$CD_zipf_wordlex_blog+df_all$CD_zipf_youtube+df_all$CD_zipf_twitter+df_all$CD_zipf_C4)
+[1] -0.5166901
+> cor(df_all$mean.RT, df_all$CD_zipf_wordlex_blog+df_all$CD_zipf_twitter+df_all$CD_zipf_C4)
+[1] -0.5002447
+> cor(df_all$mean.RT, df_all$CD_zipf_wordlex_news+df_all$CD_zipf_youtube+df_all$CD_zipf_twitter)
+[1] -0.4947792
+> cor(df_all$mean.RT, df_all$CD_zipf_C4)
+[1] -0.4224837
+> cor(df_all$mean.RT, df_all$CD_zipf_wordlex_blog+df_all$CD_zipf_shabd)
+[1] -0.4651116
+> cor(df_all$mean.RT, df_all$CD_zipf_wordlex_blog+df_all$CD_zipf_wordlex_news+df_all$CD_zipf_youtube+df_all$CD_zipf_C4)
+[1] -0.4992986
+> cor(df_all$mean.RT, df_all$CD_zipf_shabd+df_all$CD_zipf_youtube+df_all$CD_zipf_C4)
+[1] -0.5055441
+> cor(df_all$mean.RT, df_all$CD_zipf_wordlex_blog+df_all$CD_zipf_wordlex_news+df_all$CD_zipf_C4)
+[1] -0.4531181
+> cor(df_all$mean.RT, df_all$CD_zipf_wordlex_news+df_all$CD_zipf_shabd+df_all$CD_zipf_C4)
+[1] -0.4344447
+> cor(df_all$mean.RT, df_all$CD_zipf_wordlex_news+df_all$CD_zipf_C4)
+[1] -0.4070547
+> cor(df_all$mean.RT, df_all$CD_zipf_shabd+df_all$CD_zipf_youtube+df_all$CD_zipf_twitter)
+[1] -0.5096465
+> cor(df_all$mean.RT, df_all$CD_zipf_wordlex_blog+df_all$CD_zipf_wordlex_news+df_all$CD_zipf_twitter+df_all$CD_zipf_C4)
+[1] -0.4843835
+> cor(df_all$mean.RT, df_all$CD_zipf_wordlex_news+df_all$CD_zipf_youtube)
+[1] -0.484275
+> cor(df_all$mean.RT, df_all$CD_zipf_twitter)
+[1] -0.4572928
+> 
