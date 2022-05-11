@@ -1,0 +1,214 @@
+df <- read_csv('combined-zipf.csv')
+
+df.pair.shabdYtTw <- na.omit(df[c("word","twitter_zipf", "youtube_zipf", "shabd_zipf")])
+df.pair.shabdYtTw$twitter_youtube_zipf_avg <- (df.pair.shabdYtTw$twitter_zipf + df.pair.shabdYtTw$youtube_zipf)/2.0
+linear_model_shabdYT <- lm(shabd_zipf ~ twitter_youtube_zipf_avg, data=df.pair.shabdYtTw)
+df.pair.shabdYtTw$lm_preds_shabd_YT <- predict(linear_model_shabdYT)
+
+df.pair.shabdYtTw.equals <- df.pair.shabdYtTw[df.pair.shabdYtTw$shabd_zipf > (df.pair.shabdYtTw$lm_preds_shabd_YT-0.5) & df.pair.shabdYtTw$shabd_zipf < (df.pair.shabdYtTw$lm_preds_shabd_YT+0.5),]
+df.pair.shabdYtTw.realGTpredicted <- df.pair.shabdYtTw[ df.pair.shabdYtTw$shabd_zipf > (df.pair.shabdYtTw$lm_preds_shabd_YT+0.5),]
+df.pair.shabdYtTw.realLTpredicted <- df.pair.shabdYtTw[ df.pair.shabdYtTw$shabd_zipf < (df.pair.shabdYtTw$lm_preds_shabd_YT-0.5),]
+
+
+df.pair.blogYtTw <- na.omit(df[c("word","twitter_zipf", "youtube_zipf", "wordlex_blog_zipf")])
+df.pair.blogYtTw$twitter_youtube_zipf_avg <- (df.pair.blogYtTw$twitter_zipf + df.pair.blogYtTw$youtube_zipf)/2.0
+linear_model_blogYT <- lm(wordlex_blog_zipf ~ twitter_youtube_zipf_avg, data=df.pair.blogYtTw)
+df.pair.blogYtTw$lm_preds_blog_YT <- predict(linear_model_blogYT)
+
+df.pair.blogYtTw.equals <- df.pair.blogYtTw[df.pair.blogYtTw$wordlex_blog_zipf > (df.pair.blogYtTw$lm_preds_blog_YT-0.5) & df.pair.blogYtTw$wordlex_blog_zipf < (df.pair.blogYtTw$lm_preds_blog_YT+0.5),]
+
+df.pair.blogYtTw.realGTpredicted <- df.pair.blogYtTw[df.pair.blogYtTw$wordlex_blog_zipf > (df.pair.blogYtTw$lm_preds_blog_YT+0.5),]
+df.pair.blogYtTw.realLTpredicted <- df.pair.blogYtTw[df.pair.blogYtTw$wordlex_blog_zipf < (df.pair.blogYtTw$lm_preds_blog_YT-0.5),]
+
+
+
+set.seed(82) 
+df.pair.blogYtTw.realLTpredicted.seed82.300samples <- df.pair.blogYtTw.realLTpredicted[sample(nrow(df.pair.blogYtTw.realLTpredicted), 300), ]
+write.csv(df.pair.blogYtTw.realLTpredicted.seed82.300samples, 'df.pair.blogYtTw.realLTpredicted.seed82.300samples.csv')
+df.pair.blogYtTw.realGTpredicted.seed82.300samples <- df.pair.blogYtTw.realGTpredicted[sample(nrow(df.pair.blogYtTw.realGTpredicted), 300), ]
+write.csv(df.pair.blogYtTw.realGTpredicted.seed82.300samples, 'df.pair.blogYtTw.realGTpredicted.seed82.300samples.csv')
+df.pair.blogYtTw.equals.seed82.300samples <- df.pair.blogYtTw.equals[sample(nrow(df.pair.blogYtTw.equals), 300), ]
+write.csv(df.pair.blogYtTw.equals.seed82.300samples, 'df.pair.blogYtTw.equals.seed82.300samples.csv')
+df.pair.shabdYtTw.realGTpredicted.seed82.300samples <- df.pair.shabdYtTw.realGTpredicted[sample(nrow(df.pair.shabdYtTw.realGTpredicted), 300), ]
+write.csv(df.pair.shabdYtTw.realGTpredicted.seed82.300samples, 'df.pair.shabdYtTw.realGTpredicted.seed82.300samples.csv')
+df.pair.shabdYtTw.realLTpredicted.seed82.300samples <- df.pair.shabdYtTw.realLTpredicted[sample(nrow(df.pair.shabdYtTw.realLTpredicted), 300), ]
+write.csv(df.pair.shabdYtTw.realLTpredicted.seed82.300samples, 'df.pair.shabdYtTw.realLTpredicted.seed82.300samples.csv')
+df.pair.shabdYtTw.equals.seed82.300samples <- df.pair.shabdYtTw.equals[sample(nrow(df.pair.shabdYtTw.equals), 300), ]
+write.csv(df.pair.shabdYtTw.equals.seed82.300samples, 'df.pair.shabdYtTw.equals.seed82.300samples.csv')
+
+
+
+
+set.seed(82) 
+df.pair.blogYtTw.realLTpredicted.seed82.400samples <- df.pair.blogYtTw.realLTpredicted[sample(nrow(df.pair.blogYtTw.realLTpredicted), 400), ]
+write.csv(df.pair.blogYtTw.realLTpredicted.seed82.400samples, 'df.pair.blogYtTw.realLTpredicted.seed82.400samples.csv')
+df.pair.blogYtTw.realGTpredicted.seed82.400samples <- df.pair.blogYtTw.realGTpredicted[sample(nrow(df.pair.blogYtTw.realGTpredicted), 400), ]
+write.csv(df.pair.blogYtTw.realGTpredicted.seed82.400samples, 'df.pair.blogYtTw.realGTpredicted.seed82.400samples.csv')
+df.pair.blogYtTw.equals.seed82.400samples <- df.pair.blogYtTw.equals[sample(nrow(df.pair.blogYtTw.equals), 400), ]
+write.csv(df.pair.blogYtTw.equals.seed82.400samples, 'df.pair.blogYtTw.equals.seed82.400samples.csv')
+df.pair.shabdYtTw.realGTpredicted.seed82.400samples <- df.pair.shabdYtTw.realGTpredicted[sample(nrow(df.pair.shabdYtTw.realGTpredicted), 400), ]
+write.csv(df.pair.shabdYtTw.realGTpredicted.seed82.400samples, 'df.pair.shabdYtTw.realGTpredicted.seed82.400samples.csv')
+df.pair.shabdYtTw.realLTpredicted.seed82.400samples <- df.pair.shabdYtTw.realLTpredicted[sample(nrow(df.pair.shabdYtTw.realLTpredicted), 400), ]
+write.csv(df.pair.shabdYtTw.realLTpredicted.seed82.400samples, 'df.pair.shabdYtTw.realLTpredicted.seed82.400samples.csv')
+df.pair.shabdYtTw.equals.seed82.400samples <- df.pair.shabdYtTw.equals[sample(nrow(df.pair.shabdYtTw.equals), 400), ]
+write.csv(df.pair.shabdYtTw.equals.seed82.400samples, 'df.pair.shabdYtTw.equals.seed82.400samples.csv')
+
+
+set.seed(82) 
+df.pair.blogYtTw.realLTpredicted.seed82.500samples <- df.pair.blogYtTw.realLTpredicted[sample(nrow(df.pair.blogYtTw.realLTpredicted), 500), ]
+write.csv(df.pair.blogYtTw.realLTpredicted.seed82.500samples, 'df.pair.blogYtTw.realLTpredicted.seed82.500samples.csv')
+df.pair.blogYtTw.realGTpredicted.seed82.500samples <- df.pair.blogYtTw.realGTpredicted[sample(nrow(df.pair.blogYtTw.realGTpredicted), 500), ]
+write.csv(df.pair.blogYtTw.realGTpredicted.seed82.500samples, 'df.pair.blogYtTw.realGTpredicted.seed82.500samples.csv')
+df.pair.blogYtTw.equals.seed82.500samples <- df.pair.blogYtTw.equals[sample(nrow(df.pair.blogYtTw.equals), 500), ]
+write.csv(df.pair.blogYtTw.equals.seed82.500samples, 'df.pair.blogYtTw.equals.seed82.500samples.csv')
+df.pair.shabdYtTw.realGTpredicted.seed82.500samples <- df.pair.shabdYtTw.realGTpredicted[sample(nrow(df.pair.shabdYtTw.realGTpredicted), 500), ]
+write.csv(df.pair.shabdYtTw.realGTpredicted.seed82.500samples, 'df.pair.shabdYtTw.realGTpredicted.seed82.500samples.csv')
+df.pair.shabdYtTw.realLTpredicted.seed82.500samples <- df.pair.shabdYtTw.realLTpredicted[sample(nrow(df.pair.shabdYtTw.realLTpredicted), 500), ]
+write.csv(df.pair.shabdYtTw.realLTpredicted.seed82.500samples, 'df.pair.shabdYtTw.realLTpredicted.seed82.500samples.csv')
+df.pair.shabdYtTw.equals.seed82.500samples <- df.pair.shabdYtTw.equals[sample(nrow(df.pair.shabdYtTw.equals), 500), ]
+write.csv(df.pair.shabdYtTw.equals.seed82.500samples, 'df.pair.shabdYtTw.equals.seed82.500samples.csv')
+
+
+
+set.seed(82) 
+df.pair.blogYtTw.realLTpredicted.seed82.600samples <- df.pair.blogYtTw.realLTpredicted[sample(nrow(df.pair.blogYtTw.realLTpredicted), 600), ]
+write.csv(df.pair.blogYtTw.realLTpredicted.seed82.600samples, 'df.pair.blogYtTw.realLTpredicted.seed82.600samples.csv')
+df.pair.blogYtTw.realGTpredicted.seed82.600samples <- df.pair.blogYtTw.realGTpredicted[sample(nrow(df.pair.blogYtTw.realGTpredicted), 600), ]
+write.csv(df.pair.blogYtTw.realGTpredicted.seed82.600samples, 'df.pair.blogYtTw.realGTpredicted.seed82.600samples.csv')
+df.pair.blogYtTw.equals.seed82.600samples <- df.pair.blogYtTw.equals[sample(nrow(df.pair.blogYtTw.equals), 600), ]
+write.csv(df.pair.blogYtTw.equals.seed82.600samples, 'df.pair.blogYtTw.equals.seed82.600samples.csv')
+df.pair.shabdYtTw.realGTpredicted.seed82.600samples <- df.pair.shabdYtTw.realGTpredicted[sample(nrow(df.pair.shabdYtTw.realGTpredicted), 600), ]
+write.csv(df.pair.shabdYtTw.realGTpredicted.seed82.600samples, 'df.pair.shabdYtTw.realGTpredicted.seed82.600samples.csv')
+df.pair.shabdYtTw.realLTpredicted.seed82.600samples <- df.pair.shabdYtTw.realLTpredicted[sample(nrow(df.pair.shabdYtTw.realLTpredicted), 600), ]
+write.csv(df.pair.shabdYtTw.realLTpredicted.seed82.600samples, 'df.pair.shabdYtTw.realLTpredicted.seed82.600samples.csv')
+df.pair.shabdYtTw.equals.seed82.600samples <- df.pair.shabdYtTw.equals[sample(nrow(df.pair.shabdYtTw.equals), 600), ]
+write.csv(df.pair.shabdYtTw.equals.seed82.600samples, 'df.pair.shabdYtTw.equals.seed82.600samples.csv')
+
+
+
+set.seed(82) 
+df.pair.blogYtTw.realLTpredicted.seed82.700samples <- df.pair.blogYtTw.realLTpredicted[sample(nrow(df.pair.blogYtTw.realLTpredicted), 700), ]
+write.csv(df.pair.blogYtTw.realLTpredicted.seed82.700samples, 'df.pair.blogYtTw.realLTpredicted.seed82.700samples.csv')
+df.pair.blogYtTw.realGTpredicted.seed82.700samples <- df.pair.blogYtTw.realGTpredicted[sample(nrow(df.pair.blogYtTw.realGTpredicted), 700), ]
+write.csv(df.pair.blogYtTw.realGTpredicted.seed82.700samples, 'df.pair.blogYtTw.realGTpredicted.seed82.700samples.csv')
+df.pair.blogYtTw.equals.seed82.700samples <- df.pair.blogYtTw.equals[sample(nrow(df.pair.blogYtTw.equals), 700), ]
+write.csv(df.pair.blogYtTw.equals.seed82.700samples, 'df.pair.blogYtTw.equals.seed82.700samples.csv')
+df.pair.shabdYtTw.realGTpredicted.seed82.700samples <- df.pair.shabdYtTw.realGTpredicted[sample(nrow(df.pair.shabdYtTw.realGTpredicted), 700), ]
+write.csv(df.pair.shabdYtTw.realGTpredicted.seed82.700samples, 'df.pair.shabdYtTw.realGTpredicted.seed82.700samples.csv')
+df.pair.shabdYtTw.realLTpredicted.seed82.700samples <- df.pair.shabdYtTw.realLTpredicted[sample(nrow(df.pair.shabdYtTw.realLTpredicted), 700), ]
+write.csv(df.pair.shabdYtTw.realLTpredicted.seed82.700samples, 'df.pair.shabdYtTw.realLTpredicted.seed82.700samples.csv')
+df.pair.shabdYtTw.equals.seed82.700samples <- df.pair.shabdYtTw.equals[sample(nrow(df.pair.shabdYtTw.equals), 700), ]
+write.csv(df.pair.shabdYtTw.equals.seed82.700samples, 'df.pair.shabdYtTw.equals.seed82.700samples.csv')
+
+
+set.seed(82) 
+df.pair.blogYtTw.realLTpredicted.seed82.800samples <- df.pair.blogYtTw.realLTpredicted[sample(nrow(df.pair.blogYtTw.realLTpredicted), 800), ]
+write.csv(df.pair.blogYtTw.realLTpredicted.seed82.800samples, 'df.pair.blogYtTw.realLTpredicted.seed82.800samples.csv')
+df.pair.blogYtTw.realGTpredicted.seed82.800samples <- df.pair.blogYtTw.realGTpredicted[sample(nrow(df.pair.blogYtTw.realGTpredicted), 800), ]
+write.csv(df.pair.blogYtTw.realGTpredicted.seed82.800samples, 'df.pair.blogYtTw.realGTpredicted.seed82.800samples.csv')
+df.pair.blogYtTw.equals.seed82.800samples <- df.pair.blogYtTw.equals[sample(nrow(df.pair.blogYtTw.equals), 800), ]
+write.csv(df.pair.blogYtTw.equals.seed82.800samples, 'df.pair.blogYtTw.equals.seed82.800samples.csv')
+df.pair.shabdYtTw.realGTpredicted.seed82.800samples <- df.pair.shabdYtTw.realGTpredicted[sample(nrow(df.pair.shabdYtTw.realGTpredicted), 800), ]
+write.csv(df.pair.shabdYtTw.realGTpredicted.seed82.800samples, 'df.pair.shabdYtTw.realGTpredicted.seed82.800samples.csv')
+df.pair.shabdYtTw.realLTpredicted.seed82.800samples <- df.pair.shabdYtTw.realLTpredicted[sample(nrow(df.pair.shabdYtTw.realLTpredicted), 800), ]
+write.csv(df.pair.shabdYtTw.realLTpredicted.seed82.800samples, 'df.pair.shabdYtTw.realLTpredicted.seed82.800samples.csv')
+df.pair.shabdYtTw.equals.seed82.800samples <- df.pair.shabdYtTw.equals[sample(nrow(df.pair.shabdYtTw.equals), 800), ]
+write.csv(df.pair.shabdYtTw.equals.seed82.800samples, 'df.pair.shabdYtTw.equals.seed82.800samples.csv')
+
+
+set.seed(82) 
+df.pair.blogYtTw.realLTpredicted.seed82.900samples <- df.pair.blogYtTw.realLTpredicted[sample(nrow(df.pair.blogYtTw.realLTpredicted), 900), ]
+write.csv(df.pair.blogYtTw.realLTpredicted.seed82.900samples, 'df.pair.blogYtTw.realLTpredicted.seed82.900samples.csv')
+df.pair.blogYtTw.realGTpredicted.seed82.900samples <- df.pair.blogYtTw.realGTpredicted[sample(nrow(df.pair.blogYtTw.realGTpredicted), 900), ]
+write.csv(df.pair.blogYtTw.realGTpredicted.seed82.900samples, 'df.pair.blogYtTw.realGTpredicted.seed82.900samples.csv')
+df.pair.blogYtTw.equals.seed82.900samples <- df.pair.blogYtTw.equals[sample(nrow(df.pair.blogYtTw.equals), 900), ]
+write.csv(df.pair.blogYtTw.equals.seed82.900samples, 'df.pair.blogYtTw.equals.seed82.900samples.csv')
+df.pair.shabdYtTw.realGTpredicted.seed82.900samples <- df.pair.shabdYtTw.realGTpredicted[sample(nrow(df.pair.shabdYtTw.realGTpredicted), 900), ]
+write.csv(df.pair.shabdYtTw.realGTpredicted.seed82.900samples, 'df.pair.shabdYtTw.realGTpredicted.seed82.900samples.csv')
+df.pair.shabdYtTw.realLTpredicted.seed82.900samples <- df.pair.shabdYtTw.realLTpredicted[sample(nrow(df.pair.shabdYtTw.realLTpredicted), 900), ]
+write.csv(df.pair.shabdYtTw.realLTpredicted.seed82.900samples, 'df.pair.shabdYtTw.realLTpredicted.seed82.900samples.csv')
+df.pair.shabdYtTw.equals.seed82.900samples <- df.pair.shabdYtTw.equals[sample(nrow(df.pair.shabdYtTw.equals), 900), ]
+write.csv(df.pair.shabdYtTw.equals.seed82.900samples, 'df.pair.shabdYtTw.equals.seed82.900samples.csv')
+
+
+
+set.seed(82) 
+df.pair.blogYtTw.realLTpredicted.seed82.1000samples <- df.pair.blogYtTw.realLTpredicted[sample(nrow(df.pair.blogYtTw.realLTpredicted), 1000), ]
+write.csv(df.pair.blogYtTw.realLTpredicted.seed82.1000samples, 'df.pair.blogYtTw.realLTpredicted.seed82.1000samples.csv')
+df.pair.blogYtTw.realGTpredicted.seed82.1000samples <- df.pair.blogYtTw.realGTpredicted[sample(nrow(df.pair.blogYtTw.realGTpredicted), 1000), ]
+write.csv(df.pair.blogYtTw.realGTpredicted.seed82.1000samples, 'df.pair.blogYtTw.realGTpredicted.seed82.1000samples.csv')
+df.pair.blogYtTw.equals.seed82.1000samples <- df.pair.blogYtTw.equals[sample(nrow(df.pair.blogYtTw.equals), 1000), ]
+write.csv(df.pair.blogYtTw.equals.seed82.1000samples, 'df.pair.blogYtTw.equals.seed82.1000samples.csv')
+df.pair.shabdYtTw.realGTpredicted.seed82.1000samples <- df.pair.shabdYtTw.realGTpredicted[sample(nrow(df.pair.shabdYtTw.realGTpredicted), 1000), ]
+write.csv(df.pair.shabdYtTw.realGTpredicted.seed82.1000samples, 'df.pair.shabdYtTw.realGTpredicted.seed82.1000samples.csv')
+df.pair.shabdYtTw.realLTpredicted.seed82.1000samples <- df.pair.shabdYtTw.realLTpredicted[sample(nrow(df.pair.shabdYtTw.realLTpredicted), 1000), ]
+write.csv(df.pair.shabdYtTw.realLTpredicted.seed82.1000samples, 'df.pair.shabdYtTw.realLTpredicted.seed82.1000samples.csv')
+df.pair.shabdYtTw.equals.seed82.1000samples <- df.pair.shabdYtTw.equals[sample(nrow(df.pair.shabdYtTw.equals), 1000), ]
+write.csv(df.pair.shabdYtTw.equals.seed82.1000samples, 'df.pair.shabdYtTw.equals.seed82.1000samples.csv')
+
+
+
+set.seed(82) 
+df.pair.blogYtTw.realLTpredicted.seed82.2000samples <- df.pair.blogYtTw.realLTpredicted[sample(nrow(df.pair.blogYtTw.realLTpredicted), 2000), ]
+write.csv(df.pair.blogYtTw.realLTpredicted.seed82.2000samples, 'df.pair.blogYtTw.realLTpredicted.seed82.2000samples.csv')
+df.pair.blogYtTw.realGTpredicted.seed82.2000samples <- df.pair.blogYtTw.realGTpredicted[sample(nrow(df.pair.blogYtTw.realGTpredicted), 2000), ]
+write.csv(df.pair.blogYtTw.realGTpredicted.seed82.2000samples, 'df.pair.blogYtTw.realGTpredicted.seed82.2000samples.csv')
+df.pair.blogYtTw.equals.seed82.2000samples <- df.pair.blogYtTw.equals[sample(nrow(df.pair.blogYtTw.equals), 2000), ]
+write.csv(df.pair.blogYtTw.equals.seed82.2000samples, 'df.pair.blogYtTw.equals.seed82.2000samples.csv')
+df.pair.shabdYtTw.realGTpredicted.seed82.2000samples <- df.pair.shabdYtTw.realGTpredicted[sample(nrow(df.pair.shabdYtTw.realGTpredicted), 2000), ]
+write.csv(df.pair.shabdYtTw.realGTpredicted.seed82.2000samples, 'df.pair.shabdYtTw.realGTpredicted.seed82.2000samples.csv')
+df.pair.shabdYtTw.realLTpredicted.seed82.2000samples <- df.pair.shabdYtTw.realLTpredicted[sample(nrow(df.pair.shabdYtTw.realLTpredicted), 2000), ]
+write.csv(df.pair.shabdYtTw.realLTpredicted.seed82.2000samples, 'df.pair.shabdYtTw.realLTpredicted.seed82.2000samples.csv')
+df.pair.shabdYtTw.equals.seed82.2000samples <- df.pair.shabdYtTw.equals[sample(nrow(df.pair.shabdYtTw.equals), 2000), ]
+write.csv(df.pair.shabdYtTw.equals.seed82.2000samples, 'df.pair.shabdYtTw.equals.seed82.2000samples.csv')
+
+
+
+
+set.seed(82) 
+df.pair.blogYtTw.realLTpredicted.seed82.3000samples <- df.pair.blogYtTw.realLTpredicted[sample(nrow(df.pair.blogYtTw.realLTpredicted), 3000), ]
+write.csv(df.pair.blogYtTw.realLTpredicted.seed82.3000samples, 'df.pair.blogYtTw.realLTpredicted.seed82.3000samples.csv')
+df.pair.blogYtTw.realGTpredicted.seed82.3000samples <- df.pair.blogYtTw.realGTpredicted[sample(nrow(df.pair.blogYtTw.realGTpredicted), 3000), ]
+write.csv(df.pair.blogYtTw.realGTpredicted.seed82.3000samples, 'df.pair.blogYtTw.realGTpredicted.seed82.3000samples.csv')
+df.pair.blogYtTw.equals.seed82.3000samples <- df.pair.blogYtTw.equals[sample(nrow(df.pair.blogYtTw.equals), 3000), ]
+write.csv(df.pair.blogYtTw.equals.seed82.3000samples, 'df.pair.blogYtTw.equals.seed82.3000samples.csv')
+df.pair.shabdYtTw.realGTpredicted.seed82.3000samples <- df.pair.shabdYtTw.realGTpredicted[sample(nrow(df.pair.shabdYtTw.realGTpredicted), 3000), ]
+write.csv(df.pair.shabdYtTw.realGTpredicted.seed82.3000samples, 'df.pair.shabdYtTw.realGTpredicted.seed82.3000samples.csv')
+df.pair.shabdYtTw.realLTpredicted.seed82.3000samples <- df.pair.shabdYtTw.realLTpredicted[sample(nrow(df.pair.shabdYtTw.realLTpredicted), 3000), ]
+write.csv(df.pair.shabdYtTw.realLTpredicted.seed82.3000samples, 'df.pair.shabdYtTw.realLTpredicted.seed82.3000samples.csv')
+df.pair.shabdYtTw.equals.seed82.3000samples <- df.pair.shabdYtTw.equals[sample(nrow(df.pair.shabdYtTw.equals), 3000), ]
+write.csv(df.pair.shabdYtTw.equals.seed82.3000samples, 'df.pair.shabdYtTw.equals.seed82.3000samples.csv')
+
+
+
+set.seed(82) 
+df.pair.blogYtTw.realLTpredicted.seed82.4000samples <- df.pair.blogYtTw.realLTpredicted[sample(nrow(df.pair.blogYtTw.realLTpredicted), 4000), ]
+write.csv(df.pair.blogYtTw.realLTpredicted.seed82.4000samples, 'df.pair.blogYtTw.realLTpredicted.seed82.4000samples.csv')
+df.pair.blogYtTw.realGTpredicted.seed82.4000samples <- df.pair.blogYtTw.realGTpredicted[sample(nrow(df.pair.blogYtTw.realGTpredicted), 4000), ]
+write.csv(df.pair.blogYtTw.realGTpredicted.seed82.4000samples, 'df.pair.blogYtTw.realGTpredicted.seed82.4000samples.csv')
+df.pair.blogYtTw.equals.seed82.4000samples <- df.pair.blogYtTw.equals[sample(nrow(df.pair.blogYtTw.equals), 4000), ]
+write.csv(df.pair.blogYtTw.equals.seed82.4000samples, 'df.pair.blogYtTw.equals.seed82.4000samples.csv')
+df.pair.shabdYtTw.realGTpredicted.seed82.4000samples <- df.pair.shabdYtTw.realGTpredicted[sample(nrow(df.pair.shabdYtTw.realGTpredicted), 4000), ]
+write.csv(df.pair.shabdYtTw.realGTpredicted.seed82.4000samples, 'df.pair.shabdYtTw.realGTpredicted.seed82.4000samples.csv')
+df.pair.shabdYtTw.realLTpredicted.seed82.4000samples <- df.pair.shabdYtTw.realLTpredicted[sample(nrow(df.pair.shabdYtTw.realLTpredicted), 4000), ]
+write.csv(df.pair.shabdYtTw.realLTpredicted.seed82.4000samples, 'df.pair.shabdYtTw.realLTpredicted.seed82.4000samples.csv')
+df.pair.shabdYtTw.equals.seed82.4000samples <- df.pair.shabdYtTw.equals[sample(nrow(df.pair.shabdYtTw.equals), 4000), ]
+write.csv(df.pair.shabdYtTw.equals.seed82.4000samples, 'df.pair.shabdYtTw.equals.seed82.4000samples.csv')
+
+
+
+set.seed(82) 
+df.pair.blogYtTw.realLTpredicted.seed82.5000samples <- df.pair.blogYtTw.realLTpredicted[sample(nrow(df.pair.blogYtTw.realLTpredicted), 5000), ]
+write.csv(df.pair.blogYtTw.realLTpredicted.seed82.5000samples, 'df.pair.blogYtTw.realLTpredicted.seed82.5000samples.csv')
+df.pair.blogYtTw.realGTpredicted.seed82.5000samples <- df.pair.blogYtTw.realGTpredicted[sample(nrow(df.pair.blogYtTw.realGTpredicted), 5000), ]
+write.csv(df.pair.blogYtTw.realGTpredicted.seed82.5000samples, 'df.pair.blogYtTw.realGTpredicted.seed82.5000samples.csv')
+df.pair.blogYtTw.equals.seed82.5000samples <- df.pair.blogYtTw.equals[sample(nrow(df.pair.blogYtTw.equals), 5000), ]
+write.csv(df.pair.blogYtTw.equals.seed82.5000samples, 'df.pair.blogYtTw.equals.seed82.5000samples.csv')
+df.pair.shabdYtTw.realGTpredicted.seed82.5000samples <- df.pair.shabdYtTw.realGTpredicted[sample(nrow(df.pair.shabdYtTw.realGTpredicted), 5000), ]
+write.csv(df.pair.shabdYtTw.realGTpredicted.seed82.5000samples, 'df.pair.shabdYtTw.realGTpredicted.seed82.5000samples.csv')
+df.pair.shabdYtTw.realLTpredicted.seed82.5000samples <- df.pair.shabdYtTw.realLTpredicted[sample(nrow(df.pair.shabdYtTw.realLTpredicted), 5000), ]
+write.csv(df.pair.shabdYtTw.realLTpredicted.seed82.5000samples, 'df.pair.shabdYtTw.realLTpredicted.seed82.5000samples.csv')
+df.pair.shabdYtTw.equals.seed82.5000samples <- df.pair.shabdYtTw.equals[sample(nrow(df.pair.shabdYtTw.equals), 5000), ]
+write.csv(df.pair.shabdYtTw.equals.seed82.5000samples, 'df.pair.shabdYtTw.equals.seed82.5000samples.csv')
+
+
